@@ -25,3 +25,6 @@ def perform_operation(num1, num2, operation):
                 return 'Result is undefined'
             else:
                 num1 / num2
+            # return num1 / num2
+        case _: 
+            return 'Invalid operation'
