@@ -45,7 +45,7 @@ def temp_converter():
         print("Invalid temperature. Please enter a numeric value.")
         return
 
-    convert = input('Is this temperature in Celcius or Fahrenheit? (C/F): ')
+    convert = input("Is this temperature in Celcius or Fahrenheit? (C/F):")
 
     match convert.lower():
         case 'f':
