@@ -16,3 +16,32 @@ Inherits from Shape.
 Attributes: radius.
 Overrides the area() method to calculate the circle’s area using the formula: π × radius² (use math.pi for π).
 '''
+
+import math
+class Shape:
+    def __init__(self):
+        pass 
+    def __str__(self):
+        pass
+    
+
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        super().__init__()
+        self.length = length
+        self.width = width
+
+    def __str__(self):
+        return super().__str__()
+
+    def area(self):
+        return self.length * self.width
+    
+class Circle(Shape):
+    def __init__(self, radius):
+        super().__init__()
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius * self.radius
