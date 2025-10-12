@@ -1,20 +1,23 @@
 class BankAccount:
-    def __init__(self, account_balance):
-        self.account_balance = account_balance
-        self.initial_balance = 0 # default attribute value
+    def __init__(self, initial_balance = 0):
+        self.account_balance = initial_balance 
 
     def deposit(self, amount):
-        account_bal = self.account_balance + amount
-        self.initial_balance += account_bal
-        return self.initial_balance
+        self.account_balance += amount
     
     def withdraw(self, amount):
-        account_bal = self.account_balance - amount
-        self.initial_balance -= account_bal
-        return self.initial_balance
+        if amount >= self.account_balance:
+            self.account_balance -= amount
+            return True
+        else:
+            return False
     
     def display_balance(self):
-        print(f"The current balance is {self.initial_balance}")
+        print(f"Current Balance: ${self.account_balance}")
 
 
-    
+my_bank_account = BankAccount(100)
+
+my_bank_account.deposit(50)
+my_bank_account.withdraw(10)
+my_bank_account.display_balance()
