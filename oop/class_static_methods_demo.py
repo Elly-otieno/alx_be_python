@@ -10,3 +10,15 @@ Class Attribute:
 
 Define a class attribute calculation_type with a value of "Arithmetic Operations" that the multiply class method will reference.
 '''
+
+class Calculator:
+    calculation_type = "Arithmetic Operations"
+
+    @staticmethod
+    def add(a, b):
+        return a + b
+    
+    @classmethod
+    def multiply(cls, a, b):
+        print(f"Calculation type: {cls.calculation_type}")
+        return a * b
